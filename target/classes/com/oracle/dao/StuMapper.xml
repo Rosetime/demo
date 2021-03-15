@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 下面是映射文件配置 namespace中接口名称-->
+<mapper namespace="com.oracle.dao.StuMapper">
+
+	<!-- sql语句与实体类的映射 -->
+	<resultMap type="com.oracle.domain.Stu" id="searchMap">
+		<!-- 以此把实体类的字段和sql的语句中的字段对应 -->
+		<id javaType="Integer" column="sid" property="sid"/>
+		<result javaType="String" column="sname" property="sname"/>
+	</resultMap>
+	
+	<!--写上sql语句 id接口中的方法名 -->
+	<select id="search" resultMap="searchMap">
+		select * from stu
+	</select>
+	
+</mapper>

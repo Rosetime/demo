@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd 
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 打开注解自动搜索功能 --> 
+	<mvc:annotation-driven></mvc:annotation-driven> 
+
+	<!-- 找到控制器所在的包 --> 
+	<context:component-scan base-package="com.oracle.controller"></context:component-scan>
+
+	<!-- 交代跳转的页面扩展名为.jsp和跳转的位置 prefix为前缀 要跳转的页面地址 suffix为后 缀， 扩展名--> 
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<property name="prefix" value="/WEB-INF/jsp/"></property> 
+		<property name="suffix" value=".jsp"></property> 
+	</bean> 
+</beans>

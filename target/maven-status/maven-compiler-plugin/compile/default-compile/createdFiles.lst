@@ -1,0 +1,6 @@
+com\oracle\dao\StuMapper.class
+com\oracle\hellospring\HelloSpring.class
+com\oracle\controller\StuController.class
+com\oracle\service\impl\StuServiceImpl.class
+com\oracle\service\StuService.class
+com\oracle\domain\Stu.class
